@@ -1,0 +1,137 @@
+$inputHeight: 40px;
+$basePadding: 16px;
+
+*{
+  box-sizing: border-box;
+}
+
+div{
+  display: flex;
+}
+
+#root {
+  display: initial;
+}
+
+.full-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.world {
+  width: 150px;
+  margin-top: -100px;  
+}
+
+.input {
+  width: 400px;
+  height: $inputHeight;
+  line-height: $inputHeight;
+  padding: 0 $inputHeight/2;
+  border-radius: $inputHeight/2 0 0 $inputHeight/2;
+  border: 1px solid #aaa;
+  border-right: none;
+  outline: none;
+  z-index: 1;
+  &+button{
+    height: $inputHeight;
+    line-height: $inputHeight;
+    border-radius: 0 $inputHeight/2 $inputHeight/2 0;
+    border: 1px solid #aaa;
+    outline: none;
+    padding: 0 $inputHeight/2;
+    background-color: rgb(255, 149, 78);
+    color: #FFF;
+    &:hover{
+      background-color: rgb(255, 172, 117);
+    }
+    :focus {
+      background-color: rgb(230, 116, 40);
+    }
+  }
+}
+
+
+.suggest {
+  position: absolute;
+  width: 100%;
+  list-style: none;
+  padding: $inputHeight 0 0 0;
+  overflow: hidden;
+  border-radius: $inputHeight/2;
+  top: -16px;
+  border: 1px solid #aaa;
+  box-shadow: 0 3px 6px #aaa;
+  z-index: 0;
+  &-item {
+    display: flex;
+    padding: 10px $inputHeight/2;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      background: #ccc;
+    }
+    img {
+      width: $inputHeight;
+      height: $inputHeight;
+      border-radius: $inputHeight/2;
+      border: 2px solid white;
+      box-shadow: 0 0 6px gray;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+  }
+}
+
+nav {
+  height: 56px;
+  display: flex;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.178); 
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 0 $basePadding * 2;
+  @media screen and (max-width: 576px) {
+    padding: 0 $basePadding;
+  }
+  > img {
+    height: $inputHeight;
+  }
+  span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 $basePadding * 2;
+  }
+  button{
+    background: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    width: $inputHeight;
+    height: $inputHeight;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    &:focus{
+      border: 2px solid gray;
+      border-radius: $inputHeight / 2;
+    }
+  }
+}
+
+main {
+  margin: 0 !important; 
+  padding: $basePadding 0 !important;
+}
+
+.flag {
+  width: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+}

@@ -29,13 +29,46 @@
                     <button onClick={this.goBack}><img src={back} alt="back" /></button>
                 </nav>
                 {state ? <main className="container-fluid row">
-                    <div className="col-12 col-lg-4">code</div>
-                    <div className="col-12 col-lg-4"><img src={state.flag} className="flag"/></div>
-                    <div className="col-12 col-lg-4">weather</div>
+                    <div className="col-12 col-lg-6"><img src={state.flag} className="flag"/></div>
+                    <div className="col-12 col-lg-6 d-flex flex-column justify-content-around align-items-center">
+                        <div className="container-fluid row item">
+                            <div className="title">Name</div>
+                            <div className="content"><span>{state.name}</span></div>
+                        </div>
+                        <div className="container-fluid row item">
+                            <div className="title">Capital</div>
+                            <div className="content"><span>{state.capital}</span></div>
+                        </div>
+                        <div className="container-fluid row item">
+                            <div className="title">Region</div>
+                            <div className="content"><span>{state.region}</span></div>
+                        </div>
+                        <div className="container-fluid row item">
+                            <div className="title">Calling Codes</div>
+                            <div className="content"><span>{state.callingCodes}</span></div>
+                        </div>
+                    </div>
                 </main> : <span>loading ...</span>}
                 {state ? <main className="container-fluid row">
-                    <div className="col-12 col-lg-7"><span>{state.capital}</span></div>
-                    <div className="col-12 col-lg-5"><img src={state.flag} className="flag"/></div>
+                    <div className="col-12 col-lg-6"><img src={state.flag} className="flag"/></div>
+                    <div className="col-12 col-lg-6 d-flex flex-column justify-content-around align-items-center">
+                        <div className="container-fluid row item">
+                            <div className="title">Population</div>
+                            <div className="content"><span>{state.population}</span></div>
+                        </div>
+                        <div className="container-fluid row item">
+                            <div className="title">Area</div>
+                            <div className="content"><span>{state.area}</span></div>
+                        </div>
+                        <div className="container-fluid row item">
+                            <div className="title">Currencies</div>
+                            <div className="content"><span>{state.currencies[0].name}</span></div>
+                        </div>
+                        <div className="container-fluid row item">
+                            <div className="title">Languages</div>
+                            <div className="content"><span>{state.languages[0].name}</span></div>
+                        </div>
+                    </div>
                 </main> : <span>loading ...</span>} 
             </>;
         }

@@ -135,3 +135,27 @@ main {
   border-radius: 32px;
   overflow: hidden;
 }
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  .title {
+    width: 49%;
+    justify-content: flex-end;
+    padding: 0 $basePadding * 2;
+    border-radius: 32px 0 0 32px;
+    overflow: hidden;
+    background-color: #ccc;
+    border: 1px solid #eee;
+  }
+  .content {
+    width: 49%;
+    justify-content: flex-start;
+    padding: 0 $basePadding * 2;
+    border-radius: 0 32px 32px 0;
+    overflow: hidden;
+    background-color: #ddd;
+    border: 1px solid #eee;
+  }
+}

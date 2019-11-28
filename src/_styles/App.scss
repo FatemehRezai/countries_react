@@ -103,7 +103,7 @@ nav {
     height: $inputHeight;
   }
   span {
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;//display an ellipsis ('…')
     overflow: hidden;
     white-space: nowrap;
     margin: 0 $basePadding * 2;
@@ -146,7 +146,7 @@ main {
     padding: 0 $basePadding * 2;
     border-radius: 32px 0 0 32px;
     overflow: hidden;
-    background-color: #ccc;
+    //background-color: #ccc;
     border: 1px solid #eee;
   }
   .content {
@@ -155,7 +155,22 @@ main {
     padding: 0 $basePadding * 2;
     border-radius: 0 32px 32px 0;
     overflow: hidden;
-    background-color: #ddd;
+    //background-color: #ddd;
     border: 1px solid #eee;
   }
+}
+//country info
+.country {
+  // height: 40%;
+}
+.country-info {
+  background-image: radial-gradient( circle 485px at 50.4% 46.6%,  rgba(221,221,221,0.55) 0%, rgba(123,102,241,0.51) 90% );
+  border-radius: 32px;
+}
+
+//weather
+.weather {
+  background-image: radial-gradient( circle 503px at 49.5% 48.1%,  rgba(207,233,238,0.33) 7.9%, rgba(29,161,220,0.45) 68.3% );
+  border-radius: 32px;
+
 }
